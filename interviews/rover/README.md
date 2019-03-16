@@ -1,4 +1,4 @@
-# com.anonymous.projects.rover.automata.Rover Application
+# Rover
 
 A programming challenge where a rover navigates commands on a virtual grid.
 
