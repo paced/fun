@@ -30,9 +30,9 @@ You can use this to test out how TOTP works, or as a simple checking tool. You c
 - **length**: Int, length of TOTP code. Should be between 4 and 9.
 - **algo**: String, name of the HMAC algorithm.
 
-## Heroku
+## Google Cloud Platform
 
-If you want to deploy to Heroku for some reason, you just need to clone and type:
+If you want to deploy to GCP for some reason:
 
 ```bash
 heroku create
