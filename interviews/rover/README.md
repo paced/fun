@@ -6,7 +6,8 @@ A programming challenge where a rover navigates commands on a virtual grid.
 
 I've included a slightly edited version of the specification [here](SPEC.md).
 
-The most important thing is to consider the ranges allowable by the application. Our assumptions/important notes from the spec:
+The most important thing is to consider the ranges allowable by the application. Our assumptions/important notes from
+the spec:
 
 - The bottom left of the grid is (0, 0).
   - This means that the grid's dimensions are always positive.
@@ -15,12 +16,15 @@ The most important thing is to consider the ranges allowable by the application.
     - x direction is "right = positive"
     - y direction is "up = positive"
 - Placing the rover after it is already placed is not allowed.
-  - This is based on real life: rovers can only be dropped and are too heavy (with no propulsion) to simply be re-deployed after landing.
+  - This is based on real life: rovers can only be dropped and are too heavy (with no propulsion) to simply be
+    re-deployed after landing.
 - On a `MOVE` command that will not end on a valid space, just ignore the whole command.
 
 ### Design
 
-When the application starts and parses input, it must keep track of state. Other than position, it must keep track of the table state. The commands to move the rover seem to be analogous to state transitions. This lends well to object-oriented design.
+When the application starts and parses input, it must keep track of state. Other than position, it must keep track of
+the table state. The commands to move the rover seem to be analogous to state transitions. This lends well to
+object-oriented design.
 
 ## Build Instructions
 

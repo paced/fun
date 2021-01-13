@@ -6,11 +6,14 @@ An algorithmic/programming challenge.
 
 > The following is a paraphrase of the problem found in the specification.
 
-Given a pyramid of 250 mL glasses stacked on top of each other with each row of glasses containing 1 more glass than the "row" above it, when N litres of water is poured on the top-most glass, how much water is in any glass i rows from the top and j glasses from the left most glass of that column?
+Given a pyramid of 250 mL glasses stacked on top of each other with each row of glasses containing 1 more glass than
+the "row" above it, when N litres of water is poured on the top-most glass, how much water is in any glass i rows from
+the top and j glasses from the left most glass of that column?
 
 ### Inputs
 
-> "infinity" used here is an arbitrarily large number, not the concept of infinity. Such a number is limited by the hardware of the server on which the module is run. The same applies for the remainder of this document.
+> "infinity" used here is an arbitrarily large number, not the concept of infinity. Such a number is limited by the
+> hardware of the server on which the module is run. The same applies for the remainder of this document.
 
 - Decimal number of litres of water poured in the top-most glass from 0.0 to infinity.
 - Integer row of any glass from 0 to infinity.
@@ -28,7 +31,8 @@ Note that algorithmic outputs are different from user/other outputs.
 
 #### Architecture
 
-A Python module will be used to perform the calculation of each glass allowing abstraction between the serving layer (in this case, only a "main" method).
+A Python module will be used to perform the calculation of each glass allowing abstraction between the serving layer
+(in this case, only a "main" method).
 
 ### Algorithm
 
@@ -43,9 +47,12 @@ The glasses are stacked as thus:
 3: g g g g
 ```
 
-...and so on. The top `g` will flow down water to the g right below it and the one to the right. The rate of filling of any glass is dependant on the rate of filling from the glasses above. This, according to experimentation with inputs, appears to be an incidence of Pascal's Triangle. `We can use this for our unit tests.`
+...and so on. The top `g` will flow down water to the g right below it and the one to the right. The rate of filling
+of any glass is dependant on the rate of filling from the glasses above. This, according to experimentation with
+inputs, appears to be an incidence of Pascal's Triangle. `We can use this for our unit tests.`
 
-Because it must be known how much water is in the row directly above any row to determine the value in the bottom most row, we must keep a data structure containing all of the glasses.
+Because it must be known how much water is in the row directly above any row to determine the value in the bottom
+most row, we must keep a data structure containing all of the glasses.
 
 #### Pseudocode
 
@@ -78,7 +85,8 @@ for row in glass_array:
 #### Problem Assumptions
 
 - Assume that the water takes no time to flow.
-- Assume that water evaporation, spillage, and other real-world physical factors aside from gravity do not play a part in the amount of water in any cup.
+- Assume that water evaporation, spillage, and other real-world physical factors aside from gravity do not play a part
+  in the amount of water in any cup.
 - Assume that for the amount of water poured in the top glass the input will be interpreted up to 5 decimal places.
 - Assume that for the output amount of water will be within 1e-5 of the actual amount of water in that glass.
 
@@ -86,7 +94,8 @@ for row in glass_array:
 
 ##### Algorithm and Module Unit Testing
 
-We are able to easily determine the amount of water in any glass given a predetermined amount of water poured in the top glass. This may be done for elementary cases up to a certain amount of water.
+We are able to easily determine the amount of water in any glass given a predetermined amount of water poured in the
+top glass. This may be done for elementary cases up to a certain amount of water.
 
 For unit tests to pass, the output result must be within 1e-5 of the actual expected amount of water.
 
@@ -94,7 +103,8 @@ More information on running the tests can be found below in the [Build](#build) 
 
 ##### CLI Acceptance Testing
 
-There is little point in testing the CLI as the `argparse` standard library is well tested, i.e.: there is little value in these tests.
+There is little point in testing the CLI as the `argparse` standard library is well tested, i.e.: there is little
+value in these tests.
 
 #### Exceptions
 
@@ -124,7 +134,8 @@ pip install pytest
 
 ### Build Instructions
 
-Pipenv is a similar build tool to `rpm` that bundles local dependencies, manages versions of Python, and can execute scripts in a local Python environment.
+Pipenv is a similar build tool to `rpm` that bundles local dependencies, manages versions of Python, and can execute
+scripts in a local Python environment.
 
 Install all dependencies with:
 

@@ -17,7 +17,8 @@ As a Reece Branch Manager, I would like an address book application such that I 
 
 ## Assumptions
 
-- "Multiple Addressbooks" means nonspecific address books, meaning getting a list of Contacts across multiple Addressbooks will get that list of Contacts from all of them.
+- "Multiple Addressbooks" means nonspecific address books, meaning getting a list of Contacts across multiple
+  Addressbooks will get that list of Contacts from all of them.
 - There is no need to search for a Contact via name and phone number.
 - Orphan Contacts cannot exist.
 - Duplicate name and phone number are still distinct Contacts.
@@ -75,6 +76,7 @@ gradlew.bat bootRun
 
 Make calls to:
 
-- `/api/contact/add?addressbook=ADDRESSBOOK_ID&name=NAME&number=NUMBER`: Add a Contact given an Addressbook ID, a String name, and a String phone number.
+- `/api/contact/add?addressbook=ADDRESSBOOK_ID&name=NAME&number=NUMBER`: Add a Contact given an Addressbook ID, a
+  String name, and a String phone number.
 - `/api/contact/remove?addressbook=ADDRESSBOOK_ID&id=CONTACT_ID`: Remove a Contact from an Addressbook, both by ID.
 - `/api/contact/list`: List the Contacts of each Addressbook.
